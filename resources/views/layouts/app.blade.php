@@ -33,7 +33,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @if(Auth::user())
+                            @if(Auth::user()->is_profesor == 'SI')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('users') }}">Usuarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('problemas') }}">Problemas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('soluciones') }}">Soluciones</a>
+                                </li>
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="alumnoproblemas">Ver Problemas</a>
+                                </li>
+                            @endif
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->

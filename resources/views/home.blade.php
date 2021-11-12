@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('BIENVENIDOS A EL ORACULO!') }}
 
 
                     <input type="textarea" name="myTextarea" id="myTextarea">
